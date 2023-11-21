@@ -3,20 +3,23 @@
 <form method="POST">
     {% csrf_token %}
     <div class="col-md-2">
-    <div>
-        <label>Username</label>
-        <input name = "username" class="form-control" type="text">
-    </div>
-    <div>
-        <label>Password</label>
-        <input name = "password" class="form-control" type="password">
-
-    </div>
-        
-        <br>
+    {% if request.user.is_authenticated is False %}
         <div>
-            <button type="submit" class="btn btn-info">Login</button>
+            <label>Username</label>
+            <input name = "username" class="form-control" type="text">
         </div>
+        <div>
+            <label>Password</label>
+            <input name = "password" class="form-control" type="password">
+
+        </div>
+
+            <br>
+            <div>
+                <button type="submit" class="btn btn-info">Login</button>
+            </div>
+
+        {% endif %}
     </div>
 
 </form>
