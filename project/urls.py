@@ -25,5 +25,6 @@ urlpatterns = [
     path('location/', include('aplicatie1.urls')),
     path('pontaj/', include('pontaj.urls')),
     path('companies/',include('companies.urls')),
+    path('userprofile/',include('userprofile.urls')),
 
 ]

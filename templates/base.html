@@ -13,7 +13,8 @@
                 {% if request.user.is_authenticated %}
                     <a class="btn" href="{% url 'aplicatie1:lista_locatii' %}">Locatii</a>
                     <a class="btn" href="{% url 'companies:lista_companii' %}">Companii</a>
-                    <a class="btn" href="{%url 'logout' %}">Logout</a>
+                    <a class="btn" href="{% url 'userprofile:listare_utilizatori' %}">Utilizatori</a>
+                    <a class="btn" href="{% url 'logout' %}">Logout</a>
                     <span>Hi, {{ request.user.username }}</span>
                     {% if ready is False %}
                         <a href="{% url 'pontaj:stop_pontaj' %}" class="btn btn-danger">Oprire pontaj</a>

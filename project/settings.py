@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'aplicatie2',
     'pontaj',
     'companies',
+    'userprofile',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +113,8 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE =  'UTC'
 
+USE_I10N = True
+
 USE_I18N = True
 
 USE_TZ = True
@@ -124,10 +127,13 @@ STATIC_URL = 'static/'
 LOGIN_URL = '/'
 LOGIN_REDIRECT_URL =  '/location/'
 LOGOUT_REDIRECT_URL = '/'
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# SESSION_EXPIRE_AT_BROWSER_CLOSE =True
+# SESSION_COOKIE_AGE=1000
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 

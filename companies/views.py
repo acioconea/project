@@ -9,7 +9,7 @@ from django.views.generic import ListView, CreateView, UpdateView
 from companies.models import Companies
 
 
-class CompaniesView(ListView):
+class CompaniesView(LoginRequiredMixin,ListView):
 
     model = Companies
     template_name = 'companies/company_index.html'
